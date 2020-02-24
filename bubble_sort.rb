@@ -29,7 +29,9 @@ def bubble_sort_by(arr)
     i = 0
 
     while (i < arr_to_sort.length - j)
-      if yield (arr_to_sort[i], arr_to_sort[i + 1]) > 1
+      larger = yield(arr_to_sort[i], arr_to_sort[i + 1])
+      
+      if larger > 1
         arr_to_sort[i], arr_to_sort[i + 1] = arr_to_sort[i + 1], arr_to_sort[i]
       end
 
@@ -40,9 +42,9 @@ def bubble_sort_by(arr)
   arr_to_sort
 end
 
-  array_string = ["hello", "hi", "hey"]
+array_string = ["hello", "hi", "hey"]
 
-  array_sorted = bubble_sort_by(array_string) do |left, right|
+array_sorted = bubble_sort_by(array_string) do |left, right|
   left.length - right.length
 end
 
