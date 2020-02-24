@@ -32,7 +32,7 @@ def bubble_sort_by(arr)
   arr_to_sort
 end
 
-array_string = %w(hello hi hey)
+array_string = %w[hello hi hey]
 
 array_sorted = bubble_sort_by(array_string) do |left, right|
   left.length - right.length
