@@ -4,15 +4,15 @@ def bubble_sort(arr)
   arr_to_sort.length.times do
     i = 0
 
-    while (i < arr_to_sort.length - j)
+  while (i < arr_to_sort.length - j)
 
-      if (arr_to_sort[i] > arr_to_sort[i + 1])
-        arr_to_sort[i], arr_to_sort[i + 1] = arr_to_sort[i + 1], arr_to_sort[i]
-      end
+  if (arr_to_sort[i] > arr_to_sort[i + 1])
+    arr_to_sort[i], arr_to_sort[i + 1] = arr_to_sort[i + 1], arr_to_sort[i]
+  end
 
-      i += 1
-    end
-    j += 1
+  i += 1
+  end
+  j += 1
   end
   arr_to_sort
 end
@@ -28,7 +28,7 @@ def bubble_sort_by(arr)
   arr_to_sort.length.times do
     i = 0
 
-  while (i < arr_to_sort.length - j)
+  while (i < (arr_to_sort.length - j))
     larger = yield(arr_to_sort[i], arr_to_sort[i + 1])
     if larger > 1
       arr_to_sort[i], arr_to_sort[i + 1] = arr_to_sort[i + 1], arr_to_sort[i]
