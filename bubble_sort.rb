@@ -1,7 +1,7 @@
 def bubble_sort(arr)
   arr_to_sort = arr
   j = 1
-  arr_to_sort.length.times {
+  arr_to_sort.length.times do
     i = 0
 
     while(i < arr_to_sort.length - j) do
@@ -13,8 +13,7 @@ def bubble_sort(arr)
       i += 1
     end
     j += 1
-  }
-
+  end
   arr_to_sort
 end
 
@@ -26,7 +25,7 @@ puts "ordered array: #{arr_sorted}"
 def bubble_sort_by(arr) 
   arr_to_sort = arr
   j = 1 
-  arr_to_sort.length.times {
+  arr_to_sort.length.times do
     i = 0
 
     while(i < arr_to_sort.length - j) do 
@@ -38,7 +37,7 @@ def bubble_sort_by(arr)
 	    i += 1
       end
       j += 1
-    }
+    end
 
     arr_to_sort
   end
